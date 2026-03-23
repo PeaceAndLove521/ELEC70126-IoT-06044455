@@ -1,0 +1,25 @@
+function doPost(e) {
+  try {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    
+    if (!e.postData?.contents) {
+      return ContentService.createTextOutput("No data").setResponseCode(400);
+    }
+    
+    var data = JSON.parse(e.postData.contents);
+    
+    sheet.appendRow([
+      data.timestamp,
+      data.temperature,
+      data.humidity,
+      data.lightPercent,
+      data.pirState,
+      data.pirDetected
+    ]);
+    
+    return ContentService.createTextOutput("Success").setResponseCode(200);
+    
+  } catch (err) {
+    return ContentService.createTextOutput("Error: " + err).setResponseCode(500);
+  }
+}
