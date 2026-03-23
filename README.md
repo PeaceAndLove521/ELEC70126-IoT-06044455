@@ -21,3 +21,6 @@ humidity, light, and occupancy affect device power consumption.
 | `data_flow.pptx` | System architecture diagram |
 | `Figure/` | All figures used in the report |
 | `Screenshot/` | EcoSense web platform screenshots |
+
+## Live Demo
+[EcoSense Dashboard](https://peaceandlove521.github.io/ELEC70126-IoT-06044455/IOT_Coursework/website_dashboard.html)
